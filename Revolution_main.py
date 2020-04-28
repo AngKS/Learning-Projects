@@ -9,7 +9,8 @@ Weapons = {'Sword': 40,
            'Dagger': 30,
            'Axe': 100,
            'Pickaxe': 150,
-           'Knive': 350
+           'Knive': 350,
+           'Club': 50,
            }
 
 Items = {"Potions": 30
@@ -51,7 +52,7 @@ class Player:
             attack += 100
         return attack
 
-class Beast:
+class Monster:
     def __init__(self, name, class_, attack, gold, exp):
         self.name = name
         self.class_ = class_
@@ -70,6 +71,7 @@ class Beast:
             self.exp,
         ]
 
+# Enemy Names(add new monster names here)
 Beast_names = [
     'Goblin',
     'Skeletons',
@@ -85,14 +87,16 @@ Attr = [
     "Warrior",
 ]
 
+# Fight System **Work in Progress**
 def fight():
-    global Beast
-    goblin = Beast(Beast_names[0], Attr[3], "30", "50", "5")
+    global Monster
+    goblin = Monster(Beast_names[0], Attr[3], "30", "50", "5")
     print(goblin.stats)
 
 def start1():
     pass
 
+# First page when player starts the game
 def main():
     os.system('cls')
     print("Hello what is your name?")
@@ -113,11 +117,30 @@ def main():
         PlayerIG = Player(option1)
         start()
 
+
+# Leveling system for the game
 def uplvl():
     pass
 
+def store():
+    print(f"Hello {PlayerIG.name}! Welcome to Gary's  .\nYou currently have {PlayerIG.gold} Gold.")
+    print("**********")
+    # Shows a list of weapons available
+    for weapon in Weapons:
+        print(weapon + ":", str(Weapons[weapon])+" Gold")
+    print("**********\n")
+    option = input("What would you like to buy today?\n> ")
+    
+        
+
+
+
+
+
+# Home Page to navigate around everywhere
 def start():
     uplvl()
+    # Displays the Stats of the Player
     print(
         f"Name: {PlayerIG.name}\nAttack: {PlayerIG.attack}\nCurrent Weapon: {PlayerIG.curweap}\nHealth: {PlayerIG.health}/{PlayerIG.maxhealth}\nGold: {PlayerIG.gold}\nLevel: {PlayerIG.lvl}\nExp: {PlayerIG.xp}"
     )
