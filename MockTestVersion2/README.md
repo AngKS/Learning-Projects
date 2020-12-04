@@ -9,3 +9,5 @@ After cloning/downloading the files, do run `npm install` to install all the dep
 - [Express.js](https://expressjs.com/)
 - [mysql.js](https://www.npmjs.com/package/mysql)
 - [body-parser.js](https://www.npmjs.com/package/body-parser)
+
+&copy; 2020 angkahshin
