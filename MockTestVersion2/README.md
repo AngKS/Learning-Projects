@@ -3,6 +3,7 @@ This repository contains the scripts, sql file and package.json file for the Exp
 
 # Usage
 After cloning/downloading the files, do run `npm install` to install all the dependencies before running the scripts.
+Also enter your `user` and `password` values in the `databaseConfig.js` file.
 
 
 # Dependencies
