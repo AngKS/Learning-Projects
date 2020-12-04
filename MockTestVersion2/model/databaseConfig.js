@@ -7,8 +7,8 @@ var dbConnect = {
     getConnection:function(){
         var conn = mysql.createConnection({
             host : "localhost",
-            user : "Dev",
-            password : "aks12345",
+            user : "",
+            password : "",
             database : "food_db"
         }
         );
